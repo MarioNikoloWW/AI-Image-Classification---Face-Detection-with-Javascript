@@ -1,0 +1,509 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
+.Main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(36, 38  , 41);
+}
+.wave {
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 60%;
+    
+}
+.Title-Logo {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 150px;
+    height: 150px;
+}
+.Title-Logo img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: scale(1.5);
+}
+.Toggle-Btns {
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100px;
+    width: 30vw;
+}
+.Toggle-Btns i {
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition:  .7s ease-in;
+}
+.Toggle-Btns span {
+    color: white;
+}
+.Toggle-Btns .FD {
+    filter: brightness(30%);
+    transition: .7s ease-in;
+}
+.Toggle-Btns i:hover {
+    filter: brightness(105%);
+}
+.ImageClassification {
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    z-index: 9;
+    display: flex;
+}
+.Input-Btns {
+    position: absolute;
+    left: 40%;
+}
+.Input-Btns input {
+    color: rgb(36, 38  , 41);
+    transform: translate(-1vw, 0);
+    padding: 13px 15px;
+    width: 200px;
+    height: 100px;
+    font-weight: bold;
+    font-size: 25px;
+    outline: 0;
+    cursor: pointer;
+}
+.Input-Btns button {
+    outline: 0;
+    cursor: pointer;
+    padding:  2px;
+    width: 200px;
+    font-weight: bold;
+    font-size: 25px;
+}
+.Canvas-ff {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    /*border: 1px solid black;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.Canvas-ff img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.Output-f {
+    position: absolute;
+    top: 87%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 70vw;
+}
+.Output-f p {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+.FaceDetection {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 55;
+}
+
+ canvas {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999999999999999;
+}
+video {
+    transform: translate(0, 5vh);
+    z-index: 9999999;
+}
+footer {
+    width: 100%;
+    height: 25vh;
+    position: absolute;
+    bottom: -25%;
+    left: 0;
+    background-color: #161716;
+}
+.SocialMediaIcons {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 40vw;
+}
+.SocialMediaIcons a {
+    padding: 20px;
+    font-size: 30px;
+    width: 100px;
+    text-align: center;
+    color: white;
+    border-radius: 0px;
+    background: #121212;
+    box-shadow:  7px 7px 15px #090909, 
+             -7px -7px 15px #1b1b1b;
+    text-decoration: none;
+    transition: .6s ease-in;
+}
+.SocialMediaIcons a:hover {
+    border-radius: 0px;
+background: #121212;
+box-shadow:  16px 16px 32px #090909, 
+             -16px -16px 32px #1b1b1b;
+}
+.donate {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: gray;
+    font-size: 12px;
+    text-decoration: none;
+}
+.donate:hover {
+    text-decoration: underline;
+}
+.mar {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: gray;
+    font-size: 12px;
+    text-decoration: none;
+}
+.mar:hover {
+    text-decoration: underline;
+}
+@media screen and (max-width: 450px){
+    .Title-Logo {
+        top: 2%;
+        right: 30%;
+    }
+    .Toggle-Btns {
+        width: 100%;
+        top: 11%;
+    }
+    .Toggle-Btns i {
+        font-size: 13px;
+    }
+    .Input-Btns span {
+        font-size: 13px;
+    }
+    .ImageClassification {
+        height: 80%;
+        bottom: -35%;
+    }
+    .Input-Btns {
+        width: 100%;
+        left: 10%;
+    }
+    .Input-Btns input {
+        width: 150px;
+        font-size: 18px;
+    }
+    .Input-Btns button {
+        width: 130px;
+        font-size: 18px;
+    }
+    .Canvas-ff {
+        width: 100%;
+    }
+    .Output-f {
+        width: 95%;
+    }
+    .Output-f p {
+        font-size: 14px;
+    }
+    .FaceDetection video {
+        width: 400px;
+        height: 400px;
+    }
+    .SocialMediaIcons {
+        top: 30%;
+        max-width: 100%;
+    }
+    .SocialMediaIcons a {
+        width: 55px;
+        font-size: 20px;
+    }
+}
+@media screen and (min-width:331px) and (max-width: 360px){
+    .Toggle-Btns {
+        left: 53%;
+    }
+    .Toggle-Btns i, span {
+        font-size: 11px;
+    }
+}
+@media screen and (min-width: 451px) and (max-width: 550px){
+    .Title-Logo {
+        top: 2%;
+        right: 41%;
+    }
+    .Toggle-Btns {
+        width: 100%;
+        top: 11%;
+        left: 56%;
+    }
+    .Toggle-Btns i {
+        font-size: 14px;
+    }
+    .Input-Btns span {
+        font-size: 14px;
+    }
+    .ImageClassification {
+        height: 80%;
+        bottom: -35%;
+    }
+    .Input-Btns {
+        width: 100%;
+        left: 13%;
+    }
+    .Input-Btns input {
+        width: 150px;
+        font-size: 18px;
+    }
+    .Input-Btns button {
+        width: 130px;
+        font-size: 18px;
+    }
+    .Canvas-ff {
+        width: 100%;
+    }
+    .Output-f {
+        width: 95%;
+    }
+    .Output-f p {
+        font-size: 16px;
+    }
+    .FaceDetection video {
+        width: 400px;
+        height: 400px;
+    }
+    .SocialMediaIcons {
+
+        top: 20%;
+        max-width: 100%;
+    }
+    .SocialMediaIcons a {
+        width: 55px;
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 551px) and (max-width: 661px){
+    .Title-Logo {
+        top: 2%;
+        right: 41%;
+    }
+    .Toggle-Btns {
+        width: 100%;
+        top: 11%;
+        left: 60%;
+    }
+    .Toggle-Btns i {
+        font-size: 18px;
+    }
+    .Input-Btns span {
+        font-size: 18px;
+    }
+    .ImageClassification {
+        height: 80%;
+        bottom: -35%;
+    }
+    .Input-Btns {
+        width: 100%;
+        left: 18%;
+    }
+    .Input-Btns input {
+        width: 170px;
+        font-size: 20px;
+    }
+    .Input-Btns button {
+        width: 170px;
+        font-size: 20px;
+    }
+    .Canvas-ff {
+        width: 70%;
+        top: 45%;
+    }
+    .Output-f {
+        width: 95%;
+        left: 55%;
+    }
+    .Output-f p {
+        font-size: 20px;
+    }
+    .FaceDetection video {
+        width: 400px;
+        height: 400px;
+    }
+    .SocialMediaIcons {
+        top: 20%;
+        max-width: 100%;
+    }
+    .SocialMediaIcons a {
+        width: 55px;
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 662px) and (max-width: 880px){
+    .Title-Logo {
+        top: 2%;
+        right: 41%;
+    }
+    .Toggle-Btns {
+        width: 100%;
+        top: 11%;
+        left: 67%;
+    }
+    .Toggle-Btns i {
+        font-size: 20px;
+    }
+    .Input-Btns span {
+        font-size: 20px;
+    }
+    .ImageClassification {
+        height: 80%;
+        bottom: -35%;
+    }
+    .Input-Btns {
+        width: 100%;
+        left: 25%;
+    }
+    .Input-Btns input {
+        width: 170px;
+        font-size: 20px;
+    }
+    .Input-Btns button {
+        width: 170px;
+        font-size: 20px;
+    }
+    .Canvas-ff {
+        width: 70%;
+        top: 45%;
+    }
+    .Output-f {
+        width: 95%;
+        left: 60%;
+    }
+    .Output-f p {
+        font-size: 23px;
+    }
+    .FaceDetection video {
+        width: 400px;
+        height: 400px;
+    }
+    .SocialMediaIcons {
+        top: 20%;
+        max-width: 100%;
+    }
+    .SocialMediaIcons a {
+        width: 65px;
+        font-size: 20px;
+    }
+    
+}
+@media screen and (min-width: 881px) and (max-width: 1080px){
+    .Title-Logo {
+        top: 2%;
+        right: 41%;
+    }
+    .Toggle-Btns {
+        width: 100%;
+        top: 11%;
+        left: 74%;
+    }
+    .Toggle-Btns i {
+        font-size: 20px;
+    }
+    .Input-Btns span {
+        font-size: 20px;
+    }
+    .ImageClassification {
+        height: 80%;
+        bottom: -35%;
+    }
+    .Input-Btns {
+        width: 100%;
+        left: 30%;
+    }
+    .Input-Btns input {
+        width: 170px;
+        font-size: 20px;
+    }
+    .Input-Btns button {
+        width: 170px;
+        font-size: 20px;
+    }
+    .Canvas-ff {
+        width: 70%;
+        top: 45%;
+    }
+    .Output-f {
+        width: 95%;
+        left: 64%;
+    }
+    .Output-f p {
+        font-size: 23px;
+    }
+    .FaceDetection video {
+        width: 400px;
+        height: 400px;
+    }
+    
+}
+@media screen and (min-width: 2500px){
+    .Toggle-Btns i, span {
+        font-size: 28px;
+    }
+    .Output-f p {
+        font-size: 28px;
+    }
+    video {
+        transform: scale(1.3);
+    }
+}
+@media screen and (max-width: 330px){
+    .Toggle-Btns i,span {
+        font-size: 11px;
+    }
+    .Input-Btns {
+        left: 12%;
+    }
+    .Input-Btns input {
+        font-size: 11px;
+        width: 105px;
+    }
+    .Input-Btns button {
+        font-size: 11px;
+        width: 105px;
+    }
+}
